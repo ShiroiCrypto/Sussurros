@@ -1,37 +1,37 @@
-const Discord = require("discord.js")
-const corAmareloClaro = parseInt('FFEB3B', 16); // Amarelo claro
-const corAmareloEscuro = parseInt('FBC02D', 16); // Amarelo escuro
+const Discord = require("discord.js");
+const corSombrio = parseInt('2d1433', 16); // Roxo sombrio
+const corVermelhoEscuro = parseInt('8b0000', 16); // Vermelho escuro
 
 module.exports = {
   name: "apresentar", // Nome do comando
-  description: "Apresentação do bot para a Fabi.", // Descrição do comando
+  description: "Apresentação sinistra do bot.", // Descrição do comando
   type: Discord.ApplicationCommandType.ChatInput,
 
   run: async (client, interaction) => {
 
-    let dono = "297141392235560960"; // ID do dono (Shiroi)
+    let dono = "1332736517281681419"; // ID do dono (Shiroi)
     let bot = client.user.tag;
     let avatar_bot = client.user.displayAvatarURL({ dynamic: true });
     let ping = client.ws.ping;
 
     let embed = new Discord.EmbedBuilder()
-    .setColor(corAmareloClaro) // Usando o amarelo claro como cor principal
-    .setAuthor({ name: bot, iconURL: avatar_bot })
-    .setFooter({ text: bot, iconURL: avatar_bot })
-    .setTimestamp(new Date())
-    .setThumbnail(avatar_bot)
-    .setDescription(`Olá, **Fabi**! 🥰
+      .setColor(corSombrio) // Usando o roxo sombrio como cor principal
+      .setAuthor({ name: bot, iconURL: avatar_bot })
+      .setFooter({ text: bot, iconURL: avatar_bot })
+      .setTimestamp(new Date())
+      .setThumbnail(avatar_bot)
+      .setDescription(`🕯️ **Olá, mortal...** 🕯️
 
-Eu sou a **FabizinhaBOT**, e fui feita especialmente para você como um presente do **Shiroi**! 💖🎁  
+Eu sou **${client.user.username}**, uma entidade das sombras, criada por **Shiroi** para vagar por este mundo digital... 🌑✨
 
-Fui criada para alegrar seus dias, com muito carinho e amor, trazendo funcionalidades divertidas e fofas para você! 🐥💕
+Minha existência é um mistério, e meu propósito é trazer um toque de escuridão e mistério para sua vida. 🖤🔮
 
-> **Desenvolvedor:** Shiroi (ou Simeon)  
+> **Criador:** Shiroi (ou Simeon)  
 > **Ping:** \`${ping}ms\`  
-> **Feito com muito carinho em Node.js usando Discord.js**.  
+> **Feito com Node.js e Discord.js, envolto em trevas...**  
 
-Espero que você goste de mim! 💖😊`)
+Cuidado com o que deseja... Nem tudo é o que parece. 👁️‍🗨️`);
 
-    interaction.reply({ embeds: [embed], ephemeral: true })
+    interaction.reply({ embeds: [embed], ephemeral: true });
   }
-}
+};

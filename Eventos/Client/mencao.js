@@ -12,8 +12,7 @@ client.on("messageCreate", message => {
       .setTitle(`${client.user.username}`)
       .setColor(`a5d7ff`)
       .setThumbnail(client.user.avatarURL())
-      .setDescription(`> **Oi! Eu sou a \`${client.user.username}\`! 🐤✨ Se precisar de ajuda, é só chamar pelo comando /ajuda. Vou adorar te ajudar! 💖**`)
-
+      .setDescription(`> **🕯️ Eu sou \`${client.user.username}\`... Um sussurro nas sombras. Se precisar de ajuda, invoque o comando \`/ajuda\`. Mas cuidado... nem toda ajuda vem sem um preço...**`);
     message.reply({ embeds: [embed] })
   }
 });

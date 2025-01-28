@@ -14,6 +14,6 @@ module.exports = {
     ],
     run: async (client, interaction) => {
       const say = interaction.options.getString("texto")
-      interaction.reply(`${say}\nBy: ${interaction.user}`)
+      interaction.reply(`${say}\nPor: ${interaction.user}`)
     }
 }
